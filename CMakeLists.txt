@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.0.0)
+project(add)
+add_executable(mytest main.cpp)
+add_subdirectory(include)
+target_include_directories(mytest PUBLIC include)
+target_link_directories(mytest PUBLIC include)
+target_link_libraries(mytest PUBLIC myadd)
